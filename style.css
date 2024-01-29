@@ -91,3 +91,40 @@ footer {
     padding: 10px 0;
     color: white; /* Text color for footer */
 }
+
+.thankyou-note {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745; /* Green color for success message */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#subscribeBtn.clicked {
+    animation: scaleUp 0.5s;
+}
+
+#thankyouNote.show {
+    display: block;
+    opacity: 1;
+}
